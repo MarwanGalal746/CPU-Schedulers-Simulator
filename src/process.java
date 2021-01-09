@@ -7,6 +7,15 @@ public class process {
     private int completionTime;
     private int responseTime;
     private int remaining;
+    private int priority;
+
+    public void setPriority(int priority) {
+        this.priority = priority;
+    }
+
+    public int getPriority() {
+        return priority;
+    }
 
     public void setCompletionTime(int completionTime) {
         this.completionTime = completionTime;
@@ -22,6 +31,13 @@ public class process {
         this.BurstTime = BurstTime;
         this.responseTime = -1;
         this.remaining = BurstTime;
+    }
+
+    public process(String name, int arrivalTime, int BurstTime,int priority) {
+        this.name = name;
+        this.arrivalTime = arrivalTime;
+        this.BurstTime = BurstTime;
+        this.priority=priority;
     }
 
     public void setWaitingTime(int WaitingTime) {
