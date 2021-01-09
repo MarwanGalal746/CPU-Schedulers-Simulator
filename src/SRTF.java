@@ -19,7 +19,7 @@ public class SRTF {
         this.currTime = 0;
         this.contextSwitching = contextSwitching;
         numOfProcesses = p.size();
-        Collections.sort(p,new sortPbyArrival());
+        Collections.sort(p,Comparator.comparing(process::getArrivalTime));
         for (int i = 0; i < numOfProcesses; i++) allBurstTime.add(p.get(i).getBurstTime());
         currProcess = 0;
         minimumRemaining = Integer.MAX_VALUE;
