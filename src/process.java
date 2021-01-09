@@ -5,6 +5,8 @@ public class process {
     private int WaitingTime;
     private int turnaroundTime;
     private int completionTime;
+    private int responseTime;
+    private int remaining;
 
     public void setCompletionTime(int completionTime) {
         this.completionTime = completionTime;
@@ -18,6 +20,8 @@ public class process {
         this.name = name;
         this.arrivalTime = arrivalTime;
         this.BurstTime = BurstTime;
+        this.responseTime = -1;
+        this.remaining = BurstTime;
     }
 
     public void setWaitingTime(int WaitingTime) {
@@ -60,13 +64,27 @@ public class process {
         return turnaroundTime;
     }
 
+    public int getResponseTime() {
+        return responseTime;
+    }
 
+    public void setResponseTime(int responseTime) {
+        this.responseTime = responseTime;
+    }
+
+    public int getRemaining() {
+        return this.remaining;
+    }
+
+    public void setRemaining(int remaining) {
+        this.remaining = remaining;
+    }
+    
 
     @Override
     public String toString() {
         return name + " :  " + " WaitingTime=" + WaitingTime + ",  turnaroundTime=" + turnaroundTime;
     }
-
 
 
 }
