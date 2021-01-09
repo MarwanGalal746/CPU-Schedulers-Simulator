@@ -1,4 +1,4 @@
-public class process implements Comparable<process> {
+public class process {
     private String name;
     private int arrivalTime;
     private int BurstTime;
@@ -60,10 +60,7 @@ public class process implements Comparable<process> {
         return turnaroundTime;
     }
 
-    @Override
-    public int compareTo(process process) {
-        return Integer.compare(this.arrivalTime, process.arrivalTime);
-    }
+
 
     @Override
     public String toString() {
