@@ -9,6 +9,9 @@ public class MultiLevel {
     ArrayList<process> processes;
     int currentTime;
 
+
+
+
     MultiLevel(ArrayList<process> processes){
         this.processes = processes;
         this.currentTime = 0;
