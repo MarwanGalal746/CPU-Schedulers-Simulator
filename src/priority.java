@@ -1,7 +1,6 @@
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
-import java.util.HashMap;
 
 public class priority {
     private final ArrayList<process> all=new ArrayList<>(),ready=new ArrayList<>(),tempAll=new ArrayList<>();

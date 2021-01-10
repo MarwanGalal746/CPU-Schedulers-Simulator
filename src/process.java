@@ -13,6 +13,9 @@ public class process {
     public int getqType() {
         return qType;
     }
+    process(){
+        
+    }
 
     public void setqType(int qType) {
         this.qType = qType;
