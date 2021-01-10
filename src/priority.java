@@ -52,10 +52,15 @@ public class priority {
                 "------------------------------------------------------------");
         System.out.println("Process\t\t"+"Execution time\t\t"+"priority\t\t"+"Arrival time\t\t"+"Completion time\t\t"
                 +"Turnaround time\t\t"+"Waiting time");
-        for(int i=0;i<tempAll.size();i++)
-            System.out.println(tempAll.get(i).getName()+"\t\t\t\t"+tempAll.get(i).getBurstTime()+"\t\t\t\t"+tempAll.get(i).getPriority()
-                +"\t\t\t\t"+tempAll.get(i).getArrivalTime()+"\t\t\t\t\t\t"+tempAll.get(i).getCompletionTime()+"\t\t\t\t"+
-                    tempAll.get(i).getTurnaroundTime()+"\t\t\t\t\t"+tempAll.get(i).getWaitingTime());
-
+        int avgWaiting = 0, avgTurn = 0;
+        for(int i=0;i<tempAll.size();i++) {
+            System.out.println(tempAll.get(i).getName() + "\t\t\t\t" + tempAll.get(i).getBurstTime() + "\t\t\t\t" + tempAll.get(i).getPriority()
+                    + "\t\t\t\t" + tempAll.get(i).getArrivalTime() + "\t\t\t\t\t\t" + tempAll.get(i).getCompletionTime() + "\t\t\t\t" +
+                    tempAll.get(i).getTurnaroundTime() + "\t\t\t\t\t" + tempAll.get(i).getWaitingTime());
+            avgWaiting += tempAll.get(i).getWaitingTime();
+            avgTurn += tempAll.get(i).getTurnaroundTime();
+        }
+        System.out.println("Average waiting time:    " + (double) avgWaiting / tempAll.size());
+        System.out.println("Average turnaround time: " + (double) avgTurn / tempAll.size());
     }
 }
