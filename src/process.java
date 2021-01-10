@@ -9,6 +9,23 @@ public class process {
     private int remaining;
     private int priority;
     private int qType;
+
+    public int getqType() {
+        return qType;
+    }
+
+    public void setqType(int qType) {
+        this.qType = qType;
+    }
+    process(String name, int arrivalTime,int burstTime,int qType,boolean multilevel){
+        this.name = name;
+        this.arrivalTime = arrivalTime;
+        this.BurstTime = burstTime;
+        this.qType = qType;
+        this.responseTime = -1;
+        this.remaining = burstTime;
+    }
+
     public void setPriority(int priority) {
         this.priority = priority;
     }
@@ -38,6 +55,7 @@ public class process {
         this.arrivalTime = arrivalTime;
         this.BurstTime = BurstTime;
         this.priority=priority;
+
     }
 
     public void setWaitingTime(int WaitingTime) {

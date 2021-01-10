@@ -44,6 +44,7 @@ public class priority {
         }
         print();
     }
+
     public void print(){
         System.out.println("Process execution order: ");
         for(int i=0;i<printingOrder.size();i++)
