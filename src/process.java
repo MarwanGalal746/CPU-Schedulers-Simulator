@@ -8,7 +8,7 @@ public class process {
     private int responseTime;
     private int remaining;
     private int priority;
-
+    private int qType;
     public void setPriority(int priority) {
         this.priority = priority;
     }

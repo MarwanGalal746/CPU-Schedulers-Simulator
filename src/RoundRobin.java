@@ -17,7 +17,9 @@ public class RoundRobin {
         this.quantum = quantum;
         this.notArrivedYet = processes;
     }
-
+    boolean isRunning(){
+        return !cycle.isEmpty();
+    }
     void update() {
         while (!notArrivedYet.isEmpty() && notArrivedYet.get(0).getArrivalTime() <= curTime) {
             cycle.add(notArrivedYet.get(0));
